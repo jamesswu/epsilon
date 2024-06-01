@@ -1,2 +1,2 @@
 # epsilon
- <subject to be changed> project using vue, vuex and laravel
+a simple project using vue

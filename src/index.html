@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Activity Voter</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app">
+      {{message}}
+      <button @click="count++" class="px-2 py-2 bg-gray-900 text-gray-300 border-none" >Click to +1</button>
+      <p>number of times clicked {{count}}</p>
+    </div>
+  </body>
+
+  <script>
+    const {createApp, ref} = Vue;
+    const app = createApp({
+      setup() {
+        const message = ref('hello vue!');
+        return {
+          message
+        }
+      },
+      data() {
+        return {
+          count: 0
+        }
+      }
+    });
+    app.mount('#app');
+  </script>
+</html>
